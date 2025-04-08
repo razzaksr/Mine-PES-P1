@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -29,13 +31,13 @@ public class ProfessorController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<Professor> addProfessor(@RequestBody Professor professor) {
+    public ResponseEntity<Professor> addProfessor(@Valid @RequestBody Professor professor) {
         Professor savedProfessor = professorService.addProfessor(professor);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedProfessor);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Professor> updateProfessor(@PathVariable int id, @RequestBody Professor professor) {
+    public ResponseEntity<Professor> updateProfessor(@PathVariable int id,@Valid @RequestBody Professor professor) {
         Professor updatedProfessor = professorService.updateProfessor(id, professor);
         return updatedProfessor != null
                ? ResponseEntity.ok(updatedProfessor)

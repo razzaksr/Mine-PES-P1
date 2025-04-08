@@ -1,5 +1,16 @@
 @base_address = http://localhost:8082/professors
 
+# Bean Validation Check
+POST {{base_address}}/
+Content-Type: application/json
+
+{
+    "id":1,
+    "name": "Sabarinathan S",
+    "department": "EEE"
+}
+
+# Basic CRUD Check
 GET {{base_address}}/
 
 ###
