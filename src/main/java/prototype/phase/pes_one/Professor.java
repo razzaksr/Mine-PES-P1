@@ -7,14 +7,14 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class Professor {
-    @NotNull(message = "Id shouldn't be null")
-    @Min(value = 1, message = "Invalid ID")
+    @NotNull(message = "{valid.null.id}")
+    @Min(value = 1, message = "{valid.id}")
     private int id;
-    @NotNull(message = "Name shouldn't be null")
-    @Pattern(regexp = "^[a-zA-Z ]{3,}$", message = "Invalid Name")
+    @NotNull(message = "{valid.null.name}")
+    @Pattern(regexp = "^[a-zA-Z ]{3,}$", message = "{valid.name}")
     private String name;
-    @NotNull(message = "Department shouldn't be null")
-    @Pattern(regexp = "^[a-zA-Z ]{3,}$", message = "Invalid Department")
+    @NotNull(message = "{valid.null.dept}")
+    @Pattern(regexp = "^[a-zA-Z ]{3,}$", message = "{valid.dept}")
     private String department;
 
     public Professor(int id, String name, String department) {

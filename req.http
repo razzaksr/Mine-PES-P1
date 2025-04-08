@@ -5,9 +5,9 @@ POST {{base_address}}/
 Content-Type: application/json
 
 {
-    "id":1,
-    "name": "Sabarinathan S",
-    "department": "EEE"
+    "id":-9,
+    "name": "Sabarinathan S90",
+    "department": "EE"
 }
 
 # Basic CRUD Check
