@@ -1,5 +1,36 @@
 @base_address = http://localhost:8082/professors
 
+# Bean Validation Check with multilingual
+POST {{base_address}}/
+Accept-Language: en
+Content-Type: application/json
+
+{
+    "id":0,
+    "name": "Sabarinathan S98",
+    "department": "EE"
+}
+###
+POST {{base_address}}/
+Accept-Language: kn
+Content-Type: application/json
+
+{
+    "id":0,
+    "name": "Sabarinathan S98",
+    "department": "EE"
+}
+###
+POST {{base_address}}/
+Accept-Language: ta
+Content-Type: application/json
+
+{
+    "id":0,
+    "name": "Sabarinathan S98",
+    "department": "EE"
+}
+###
 # Bean Validation Check
 POST {{base_address}}/
 Content-Type: application/json
