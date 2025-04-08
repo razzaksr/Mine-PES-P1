@@ -1,0 +1,33 @@
+@base_address = http://localhost:8082/professors
+
+GET {{base_address}}/
+
+###
+
+GET {{base_address}}/12
+
+###
+
+POST {{base_address}}/
+Content-Type: application/json
+
+{
+  "id": 11,
+  "name": "Sabarinathan S",
+  "department": "EEE"
+}
+
+###
+
+PUT {{base_address}}/12
+Content-Type: application/json
+
+{
+  "id": 12,
+  "name": "Razak Mohamed S",
+  "department": "ISE"
+}
+
+###
+
+DELETE {{base_address}}/12
