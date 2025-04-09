@@ -63,12 +63,12 @@ Content-Type: application/json
 
 ###
 
-PUT {{base_address}}/88
+PUT {{base_address}}/
 Content-Type: application/json
 
 {
   "id": 88,
-  "name": "Rasheedha Mohamed R",
+  "name": "Rasheedha R Mohamed",
   "department": "CSE"
 }
 

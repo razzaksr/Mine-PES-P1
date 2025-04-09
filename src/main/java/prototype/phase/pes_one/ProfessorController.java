@@ -14,8 +14,10 @@ import java.util.Optional;
 @RequestMapping("/professors")
 public class ProfessorController {
     
+    // @Autowired
+    // ProfessorFileService professorService;
     @Autowired
-    ProfessorService professorService;
+    private ProfessorJpaService professorService;
 
     @GetMapping("/")
     public ResponseEntity<List<Professor>> getAllProfessors() {
@@ -36,9 +38,9 @@ public class ProfessorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(savedProfessor);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Professor> updateProfessor(@PathVariable int id,@Valid @RequestBody Professor professor) {
-        Professor updatedProfessor = professorService.updateProfessor(id, professor);
+    @PutMapping("/")
+    public ResponseEntity<Professor> updateProfessor(@Valid @RequestBody Professor professor) {
+        Professor updatedProfessor = professorService.updateProfessor(professor);
         return updatedProfessor != null
                ? ResponseEntity.ok(updatedProfessor)
                : ResponseEntity.status(HttpStatus.NOT_FOUND).build();

@@ -1,17 +1,22 @@
 package prototype.phase.pes_one;
 
-import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
+@Entity
 public class Professor {
 
     @CsvBindByPosition(position = 0)
     @NotNull(message = "{valid.null.id}")
     @Min(value = 1, message = "{valid.id}")
+    @Id
     private int id;
     @CsvBindByPosition(position = 1)
     @NotNull(message = "{valid.null.name}")

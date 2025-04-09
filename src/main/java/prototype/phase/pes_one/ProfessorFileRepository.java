@@ -3,7 +3,7 @@ package prototype.phase.pes_one;
 import java.util.List;
 import java.util.Optional;
 
-public interface ProfessorRepository {
+public interface ProfessorFileRepository {
     Professor addProfessor(Professor professor);
     List<Professor> getAllProfessors();
     Optional<Professor> getProfessorById(int id);

@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProfessorService implements ProfessorRepository {
+public class ProfessorFileService implements ProfessorFileRepository {
     File file=new File("mec.csv");
     private List<Professor> professors = new ArrayList<>();
 
