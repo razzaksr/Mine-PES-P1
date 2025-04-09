@@ -41,12 +41,14 @@ Content-Type: application/json
     "department": "EE"
 }
 
+###
+
 # Basic CRUD Check
 GET {{base_address}}/
 
 ###
 
-GET {{base_address}}/12
+GET {{base_address}}/88
 
 ###
 
@@ -54,22 +56,22 @@ POST {{base_address}}/
 Content-Type: application/json
 
 {
-  "id": 11,
-  "name": "Sabarinathan S",
-  "department": "EEE"
+  "id": 88,
+  "name": "Rasheedha Mohamed S",
+  "department": "CSE"
 }
 
 ###
 
-PUT {{base_address}}/12
+PUT {{base_address}}/88
 Content-Type: application/json
 
 {
-  "id": 12,
-  "name": "Razak Mohamed S",
-  "department": "ISE"
+  "id": 88,
+  "name": "Rasheedha Mohamed R",
+  "department": "CSE"
 }
 
 ###
 
-DELETE {{base_address}}/12
+DELETE {{base_address}}/88
