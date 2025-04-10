@@ -1,6 +1,7 @@
 package prototype.phase.pes_one;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.times;
@@ -51,6 +52,7 @@ public class RepositoryTest {
         Professor professor2 = new Professor(1, "Dr. White", "Chemistry");
         when(repository.save(professor1)).thenReturn(professor1);
         assertEquals(professor1, service.addProfessor(professor1));
+        assertNotEquals(professor2.getName(),service.addProfessor(professor1).getName());
     }
 
     @Test

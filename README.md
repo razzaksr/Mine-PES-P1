@@ -6,3 +6,4 @@ Progess Stages:
 5. CRUD with CSV File using opencsv dependency
 6. CRUD with JPA
 7. Testing JpaService by mocking repository
+8. Testing Controller by mocking service, also testing Controller using mockMVC
