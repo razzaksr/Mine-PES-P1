@@ -4,3 +4,5 @@ Progess Stages:
 3. Custom properties files for Bean Validation error messages
 4. Added multiple properties file with different languages such as english, tamil, kannada inorder to enable multilingual support of error messages
 5. CRUD with CSV File using opencsv dependency
+6. CRUD with JPA
+7. Testing JpaService by mocking repository
